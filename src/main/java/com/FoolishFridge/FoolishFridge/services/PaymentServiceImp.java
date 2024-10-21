@@ -6,7 +6,6 @@ import com.stripe.exception.StripeException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-// import com.FoolishFridge.FoolishFridge.models.FoolishFridgeOrder;
 import com.FoolishFridge.FoolishFridge.responses.PaymentResponse;
 import com.stripe.model.checkout.Session;
 import com.stripe.param.checkout.SessionCreateParams;
