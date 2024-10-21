@@ -35,9 +35,19 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
+  			<groupId>com.stripe</groupId>
+  			<artifactId>stripe-java</artifactId>
+  			<version>27.1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.9.1</version>
+    </dependency>
 				<dependency>
   			<groupId>me.paulschwarz</groupId>
   			<artifactId>spring-dotenv</artifactId>
@@ -49,6 +59,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<exclusions>
+		<exclusion>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-json</artifactId>
+		</exclusion>
+	</exclusions>
 	</dependencies>
 
 	<build>
