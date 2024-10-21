@@ -59,12 +59,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<exclusions>
+		<!-- <exclusions>
 		<exclusion>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-json</artifactId>
 		</exclusion>
-	</exclusions>
+	</exclusions> -->
 	</dependencies>
 
 	<build>
