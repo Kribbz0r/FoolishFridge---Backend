@@ -1,7 +1,5 @@
 package com.FoolishFridge.FoolishFridge.responses;
 
-import org.springframework.stereotype.Service;
-
 public class PaymentResponse {
 
     private String paymentUrl;

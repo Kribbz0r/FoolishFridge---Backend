@@ -26,7 +26,7 @@ public class StripeController {
     @Autowired
     private PaymentService paymentService;
 
-    @PostMapping("/api/embedded-checkout")
+    @PostMapping("/api/checkout")
     public ResponseEntity<PaymentResponse> createOrder() throws StripeException {
 
         PaymentResponse paymentResponse = paymentService.createPaymentLink();

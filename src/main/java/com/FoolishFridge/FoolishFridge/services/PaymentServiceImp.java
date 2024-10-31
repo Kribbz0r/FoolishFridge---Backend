@@ -18,14 +18,12 @@ public class PaymentServiceImp implements PaymentService {
 
         @Override
         public PaymentResponse createPaymentLink() throws StripeException {
-
                 Stripe.apiKey = stripeSecretApiKey;
-
                 SessionCreateParams params = SessionCreateParams.builder()
                                 .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
                                 .setMode(SessionCreateParams.Mode.PAYMENT)
-                                .setSuccessUrl("http://localhost:8080/payment/sucsess")
-                                .setCancelUrl("http://localhost:8080/payment/fail")
+                                .setSuccessUrl("http://localhost:5173/payment?success")
+                                .setCancelUrl("http://localhost:5173/payment?fail")
                                 .addLineItem(SessionCreateParams.LineItem.builder()
                                                 .setQuantity(1L)
                                                 .setPriceData(SessionCreateParams.LineItem.PriceData.builder()
@@ -38,12 +36,8 @@ public class PaymentServiceImp implements PaymentService {
                                                                 .build())
                                                 .build())
                                 .build();
-
                 Session session = Session.create(params);
-
                 PaymentResponse response = new PaymentResponse(session.getUrl());
-
                 return response;
         }
-
 }
