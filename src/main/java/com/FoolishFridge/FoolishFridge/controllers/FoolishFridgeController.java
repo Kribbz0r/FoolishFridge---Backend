@@ -22,16 +22,11 @@ public class FoolishFridgeController {
 
     @PostMapping("/FoolishFridge")
     public FoolishFridge newFoolishFridgeEntry(@RequestBody FoolishFridgeData foolishFridgeData) {
-
-        System.out.println("Detta är varning: " + foolishFridgeData.getWarning());
-        System.out.println("Detta är tiden: " + foolishFridgeData.getDoorOpenTime());
-
         return foolishFridgeService.newFoolishFridgeEntry(foolishFridgeData);
     }
 
     @GetMapping("/FoolishFridge")
     public List<FoolishFridge> getFoolishFridge() {
-        System.out.println("Här hämtas det");
         return foolishFridgeService.getFoolishFridge();
     }
 
